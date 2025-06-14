@@ -1,0 +1,256 @@
+// Game Configuration Constants
+export const GAME_CONFIG = {
+  ZONE_CAPTURE_RADIUS_METERS: 20,
+  ZONE_INTERACTION_RADIUS: 20,
+  ZONE_EXPIRY_HOURS: 24,
+  ATTACK_COOLDOWN_MINUTES: 30,
+  MAX_NEARBY_ZONES: 50,
+  DEFAULT_ZONE_XP_VALUE: 10,
+  DEFENDER_ADVANTAGE: 20, // Added to defense power
+  GRID_SIZE: 0.001, // Degrees for zone grid
+  MAX_USER_LEVEL: 100,
+  XP_PER_LEVEL: 1000,
+};
+
+// Zone Status Constants
+export const ZONE_STATUS = {
+  UNCLAIMED: 'unclaimed',
+  OWNED: 'owned',
+  ENEMY: 'enemy',
+} as const;
+
+export const ZONE_COLORS = {
+  unclaimed: '#9E9E9E', // Gray
+  owned: '#2196F3',     // Blue
+  enemy: '#F44336',     // Red
+} as const;
+
+// API Configuration
+export const API_CONFIG = {
+  BASE_URL: 'http://localhost:8000/api/v1', // Development
+  TIMEOUT: 10000,
+  HEADERS: {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+  }
+};
+
+// Notification Types
+export const NOTIFICATION_TYPES = {
+  ZONE_ATTACK: 'zone_attack',
+  BATTLE_RESULT: 'battle_result',
+  ZONE_CAPTURED: 'zone_captured',
+  LEVEL_UP: 'level_up',
+} as const;
+
+// Screen Names
+export const SCREEN_NAMES = {
+  LOGIN: 'login',
+  REGISTER: 'register',
+  MAP: 'map',
+  PROFILE: 'profile',
+  LEADERBOARD: 'leaderboard',
+  ATTACK_HISTORY: 'attack-history',
+  ZONE_DETAILS: 'zone-details',
+} as const;
+
+// Colors
+export const COLORS = {
+  // Brand colors (uppercase for legacy compatibility)
+  PRIMARY: '#007AFF',
+  SECONDARY: '#5856D6',
+  SUCCESS: '#34C759',
+  DANGER: '#FF3B30',
+  WARNING: '#FF9500',
+  INFO: '#5AC8FA',
+  LIGHT: '#F2F2F7',
+  DARK: '#1C1C1E',
+  WHITE: '#FFFFFF',
+  BLACK: '#000000',
+  GRAY: '#8E8E93',
+  LIGHT_GRAY: '#F5F5F5',
+
+  // UI semantic colors (lowercase for modern usage)
+  primary: '#007AFF',
+  secondary: '#5856D6',
+  success: '#34C759',
+  danger: '#FF3B30',
+  warning: '#FF9500',
+  info: '#5AC8FA',
+  error: '#FF3B30',
+
+  // Background colors
+  background: '#FFFFFF',
+  surface: '#F8F9FA',
+
+  // Text colors
+  text: '#000000',
+  textPrimary: '#000000',
+  textSecondary: '#6C757D',
+  textDisabled: '#ADB5BD',
+
+  // Border colors
+  border: '#E9ECEF',
+  borderLight: '#F8F9FA',
+  borderDark: '#DEE2E6',
+
+  // Text on colored backgrounds
+  textOnPrimary: '#FFFFFF',
+  textOnSecondary: '#FFFFFF',
+  textOnSuccess: '#FFFFFF',
+  textOnError: '#FFFFFF',
+  textOnWarning: '#000000',
+  textOnInfo: '#000000',
+
+  // Status colors
+  online: '#34C759',
+  offline: '#8E8E93',
+  away: '#FF9500',
+};
+
+// Typography
+export const TYPOGRAPHY = {
+  // iOS-style typography (uppercase for legacy compatibility)
+  LARGE_TITLE: {
+    fontSize: 34,
+    fontWeight: 'bold' as const,
+  },
+  TITLE: {
+    fontSize: 28,
+    fontWeight: 'bold' as const,
+  },
+  HEADLINE: {
+    fontSize: 17,
+    fontWeight: '600' as const,
+  },
+  BODY: {
+    fontSize: 17,
+    fontWeight: 'normal' as const,
+  },
+  CALLOUT: {
+    fontSize: 16,
+    fontWeight: 'normal' as const,
+  },
+  SUBHEAD: {
+    fontSize: 15,
+    fontWeight: 'normal' as const,
+  },
+  FOOTNOTE: {
+    fontSize: 13,
+    fontWeight: 'normal' as const,
+  },
+  CAPTION: {
+    fontSize: 12,
+    fontWeight: 'normal' as const,
+  },
+
+  // Common aliases for easier use
+  h1: {
+    fontSize: 34,
+    fontWeight: 'bold' as const,
+  },
+  h2: {
+    fontSize: 28,
+    fontWeight: 'bold' as const,
+  },
+  h3: {
+    fontSize: 22,
+    fontWeight: '600' as const,
+  },
+  h4: {
+    fontSize: 18,
+    fontWeight: '600' as const,
+  },
+  body: {
+    fontSize: 17,
+    fontWeight: 'normal' as const,
+  },
+  bodySmall: {
+    fontSize: 15,
+    fontWeight: 'normal' as const,
+  },
+  caption: {
+    fontSize: 12,
+    fontWeight: 'normal' as const,
+  },
+  button: {
+    fontSize: 16,
+    fontWeight: '600' as const,
+  },
+};
+
+// Spacing
+export const SPACING = {
+  // Uppercase for legacy compatibility
+  XS: 4,
+  SM: 8,
+  MD: 16,
+  LG: 24,
+  XL: 32,
+  XXL: 48,
+
+  // Lowercase aliases for modern usage
+  xs: 4,
+  sm: 8,
+  md: 16,
+  lg: 24,
+  xl: 32,
+  xxl: 48,
+
+  // Component-specific spacing
+  screenPadding: 16,
+  cardPadding: 16,
+  buttonPadding: 12,
+  inputPadding: 16,
+};
+
+// Border Radius
+export const BORDER_RADIUS = {
+  // Uppercase for legacy compatibility
+  SM: 4,
+  MD: 8,
+  LG: 12,
+  XL: 16,
+  ROUND: 999,
+
+  // Lowercase aliases for modern usage
+  small: 4,
+  medium: 8,
+  large: 12,
+  extraLarge: 16,
+  round: 999,
+};
+
+// Shadow
+export const SHADOW = {
+  SMALL: {
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+    elevation: 3,
+  },
+  MEDIUM: {
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
+  LARGE: {
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.30,
+    shadowRadius: 4.65,
+    elevation: 8,
+  },
+};
