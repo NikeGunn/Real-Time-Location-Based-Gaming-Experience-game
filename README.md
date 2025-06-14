@@ -79,20 +79,6 @@
 
 </div>
 
-## 🎨 Design & User Interface
-
-### 📱 Mobile-First Design
-Our app features a clean, intuitive interface optimized for mobile gaming with smooth animations and responsive touch interactions.
-
-<div align="center">
-
-| 🗺️ **Interactive Map** | ⚔️ **Battle System** | 📊 **Leaderboards** | 👤 **User Profile** |
-|:---:|:---:|:---:|:---:|
-| ![Map Screen](assets/screenshots/map-screen.png) | ![Attack Screen](assets/screenshots/attack-screen.png) | ![Leaderboard](assets/screenshots/leaderboard.png) | ![Profile](assets/screenshots/profile.png) |
-| Real-time zone visualization with color-coded territories | Strategic battle interface with animated combat | Live rankings and statistics | Progress tracking and achievements |
-
-</div>
-
 ### 🎨 Visual Design System
 
 #### Color Palette
